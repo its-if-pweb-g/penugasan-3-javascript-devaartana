@@ -5,6 +5,7 @@ const sendAnimation = document.querySelector('#snd-animation')
 const textField = document.querySelector('#textField')
 const textFieldTarget = document.querySelector('#text-result')
 const detailBtn = document.querySelectorAll('#anime, #manhwa')
+const navbar = document.querySelector('header')
 
 form.addEventListener('submit', (event) => {
 
@@ -74,8 +75,10 @@ detailBtn.forEach(btn => btn.addEventListener('click', () => {
 
   if (detailTarget.classList.contains('hidden')) {
     detailTarget.classList.remove('hidden')
+    navbar.classList.add('hidden')
   } else {
     detailTarget.classList.add('hidden')
+    navbar.classList.remove('hidden')
   }
 }))
 
